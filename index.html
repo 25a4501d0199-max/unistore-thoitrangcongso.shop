@@ -1,0 +1,1880 @@
+1. THÔNG TIN DỰ ÁN
+Tên dự án:
+
+[ĐIỀN TÊN WEBSITE]
+
+Loại website:
+
+[Ví dụ: E-commerce / SaaS / Landing Page / Blog / Portfolio / Booking / Education / Social Network / Dashboard / Marketplace / News / Agency...]
+
+Mục tiêu chính:
+
+[MÔ TẢ MỤC TIÊU WEBSITE]
+
+Đối tượng người dùng:
+
+[MÔ TẢ USER TARGET]
+
+Ngôn ngữ:
+
+[Tiếng Việt / English / Đa ngôn ngữ]
+
+Phong cách thương hiệu:
+
+[Modern / Premium / Minimal / Luxury / Futuristic / Corporate / Creative / Technology...]
+
+2. MỤC TIÊU TỔNG THỂ
+Hãy xây dựng một website có chất lượng tương đương một sản phẩm thương mại thực tế, không phải một prototype đơn giản.
+
+Website phải đạt các tiêu chí:
+
+Đẹp.
+
+Hiện đại.
+
+Cao cấp.
+
+Trực quan.
+
+Dễ sử dụng.
+
+Responsive hoàn toàn.
+
+Tốc độ tải nhanh.
+
+UX tốt.
+
+Có animation tinh tế.
+
+Có đầy đủ trạng thái loading/error/empty/success.
+
+Có validation.
+
+Có xử lý lỗi.
+
+Có accessibility cơ bản.
+
+Có SEO tốt.
+
+Có cấu trúc code rõ ràng.
+
+Có khả năng mở rộng.
+
+Có khả năng kết nối API/backend.
+
+Không sử dụng code giả ở những phần quan trọng.
+
+Không tạo ra giao diện sơ sài.
+
+Không bỏ trống những chức năng đã được yêu cầu.
+
+Nếu một chức năng chưa có backend thật, hãy thiết kế abstraction/service layer rõ ràng để có thể kết nối backend sau này.
+
+3. NGUYÊN TẮC QUAN TRỌNG NHẤT
+3.1. Không được làm website kiểu "demo cho có"
+Không được chỉ tạo:
+
+Một navbar.
+
+Một hero section.
+
+Một vài card.
+
+Một footer.
+
+Sau đó coi như hoàn thành.
+
+Thay vào đó, hãy xây dựng một web application hoàn chỉnh, có logic, trạng thái, tương tác và trải nghiệm người dùng thực tế.
+
+4. CÔNG NGHỆ
+Nếu tôi không chỉ định công nghệ cụ thể, hãy ưu tiên stack hiện đại sau:
+
+Frontend
+Next.js phiên bản stable mới.
+
+React.
+
+TypeScript.
+
+Tailwind CSS.
+
+shadcn/ui khi phù hợp.
+
+Lucide Icons hoặc icon library hiện đại.
+
+Framer Motion / Motion cho animation.
+
+React Hook Form.
+
+Zod cho validation.
+
+Backend
+Tùy loại dự án:
+
+Next.js Route Handlers / Server Actions.
+
+REST API hoặc API layer rõ ràng.
+
+Có thể sử dụng PostgreSQL nếu cần database.
+
+Prisma ORM nếu phù hợp.
+
+Authentication
+Nếu website yêu cầu tài khoản:
+
+Email/password.
+
+OAuth nếu cần.
+
+Session management.
+
+Protected routes.
+
+Role-based access control nếu cần.
+
+Database
+Nếu cần:
+
+PostgreSQL.
+
+Prisma ORM.
+
+Storage
+Nếu cần upload:
+
+Thiết kế storage abstraction.
+
+Có thể tích hợp Cloudinary / S3-compatible storage hoặc dịch vụ tương đương.
+
+Deployment
+Ưu tiên kiến trúc dễ deploy lên:
+
+Vercel.
+
+Railway.
+
+Render.
+
+Cloudflare.
+
+Hoặc VPS.
+
+Không hard-code secret/API key trong source code.
+
+5. YÊU CẦU KIẾN TRÚC
+Trước khi viết code, hãy suy nghĩ và thiết kế:
+
+Application architecture.
+
+Folder structure.
+
+Component architecture.
+
+Data flow.
+
+State management.
+
+API architecture.
+
+Database schema nếu cần.
+
+Authentication flow.
+
+Authorization flow.
+
+Error handling.
+
+Loading states.
+
+Responsive strategy.
+
+SEO strategy.
+
+Performance strategy.
+
+Code phải có tính modular.
+
+Không viết toàn bộ website trong một file duy nhất.
+
+Ưu tiên:
+
+Reusable components.
+
+Reusable hooks.
+
+Utility functions.
+
+Service layer.
+
+Type-safe data models.
+
+Separation of concerns.
+
+6. CẤU TRÚC GIAO DIỆN
+Hãy thiết kế website theo tư duy của một Senior UI/UX Designer.
+
+Mỗi trang phải có hierarchy rõ ràng:
+
+Header / Navigation
+
+Hero hoặc Page Header
+
+Main Content
+
+Supporting Sections
+
+CTA
+
+Footer
+
+Tuy nhiên KHÔNG được áp dụng máy móc.
+
+Hãy lựa chọn layout phù hợp với từng loại trang.
+
+7. HEADER / NAVBAR
+Header phải:
+
+Responsive.
+
+Sticky hoặc fixed nếu phù hợp.
+
+Có trạng thái khi scroll.
+
+Có logo.
+
+Navigation rõ ràng.
+
+CTA nổi bật nếu cần.
+
+Mobile menu.
+
+Smooth transition.
+
+Active navigation state.
+
+Desktop:
+
+Navigation được căn chỉnh cân đối.
+
+Khoảng trắng hợp lý.
+
+Không nhồi quá nhiều item.
+
+Mobile:
+
+Hamburger menu.
+
+Menu animation mượt.
+
+Không làm layout bị overflow.
+
+Nếu phù hợp, thêm:
+
+Search.
+
+Notification.
+
+User avatar.
+
+Cart.
+
+Theme switcher.
+
+Language selector.
+
+8. HERO SECTION
+Hero phải có khả năng tạo ấn tượng ngay khi người dùng truy cập.
+
+Bao gồm nếu phù hợp:
+
+Eyebrow text.
+
+Heading lớn.
+
+Supporting paragraph.
+
+Primary CTA.
+
+Secondary CTA.
+
+Visual chính.
+
+Product mockup.
+
+Illustration.
+
+Dashboard preview.
+
+Gradient.
+
+Background decoration.
+
+Heading phải có typography mạnh.
+
+Không sử dụng quá nhiều hiệu ứng khiến website giống template AI.
+
+9. DESIGN SYSTEM
+Hãy xây dựng design system nhất quán.
+
+Màu sắc
+Nếu tôi không cung cấp màu thương hiệu, hãy tự chọn palette hiện đại.
+
+Ví dụ:
+
+Primary:
+
+#6366F1
+
+Secondary:
+
+#8B5CF6
+
+Accent:
+
+#06B6D4
+
+Background:
+
+#F8FAFC
+
+Dark:
+
+#0F172A
+
+Text:
+
+#0F172A
+
+Muted:
+
+#64748B
+
+Border:
+
+#E2E8F0
+
+Tuy nhiên không bắt buộc phải sử dụng chính xác những màu trên.
+
+Hãy lựa chọn palette phù hợp với ngành nghề và đảm bảo contrast tốt.
+
+10. TYPOGRAPHY
+Ưu tiên font hiện đại, dễ đọc.
+
+Có thể sử dụng:
+
+Inter.
+
+Geist.
+
+Manrope.
+
+Plus Jakarta Sans.
+
+DM Sans.
+
+Typography hierarchy phải rõ:
+
+Display.
+
+H1.
+
+H2.
+
+H3.
+
+Body.
+
+Caption.
+
+Label.
+
+Không sử dụng quá nhiều font.
+
+Tối đa nên có 1–2 font family.
+
+11. SPACING
+Sử dụng spacing system nhất quán.
+
+Ưu tiên:
+
+4px
+
+8px
+
+12px
+
+16px
+
+24px
+
+32px
+
+48px
+
+64px
+
+80px
+
+96px
+
+Không tạo spacing ngẫu nhiên cho từng component.
+
+12. BORDER RADIUS
+Sử dụng radius hiện đại và thống nhất.
+
+Ví dụ:
+
+Small: 8px.
+
+Medium: 12px.
+
+Large: 16px.
+
+Card: 20px.
+
+Hero/featured component: 24px.
+
+Không bo tròn mọi thứ quá mức.
+
+13. CARD DESIGN
+Card phải có:
+
+Clear hierarchy.
+
+Padding hợp lý.
+
+Border tinh tế.
+
+Shadow nhẹ.
+
+Hover state.
+
+Transition.
+
+Tránh shadow quá nặng.
+
+Ưu tiên:
+
+border + subtle shadow + background contrast
+
+thay vì shadow cực lớn.
+
+14. BUTTON DESIGN
+Button phải có:
+
+Primary.
+
+Secondary.
+
+Ghost.
+
+Destructive nếu cần.
+
+Button cần có:
+
+Hover.
+
+Active.
+
+Focus.
+
+Disabled.
+
+Loading.
+
+Ví dụ loading:
+
+[spinner] Đang xử lý...
+
+Không để người dùng click nhiều lần khi request đang chạy.
+
+15. FORM DESIGN
+Form phải có:
+
+Label.
+
+Placeholder phù hợp.
+
+Validation.
+
+Error message.
+
+Success state.
+
+Loading state.
+
+Disabled state.
+
+Required indicator nếu cần.
+
+Validation nên được xử lý bằng schema.
+
+Không chỉ validate phía client nếu có backend.
+
+Backend cũng phải validate dữ liệu.
+
+16. ANIMATION & MICRO-INTERACTION
+Animation phải:
+
+Mượt.
+
+Có mục đích.
+
+Không gây khó chịu.
+
+Không làm giảm performance.
+
+Ưu tiên:
+
+Fade.
+
+Slide.
+
+Scale nhẹ.
+
+Blur transition.
+
+Stagger animation.
+
+Hover animation.
+
+Modal transition.
+
+Dropdown transition.
+
+Page transition nếu phù hợp.
+
+Duration tham khảo:
+
+Micro interaction: 150–200ms.
+
+Normal transition: 200–300ms.
+
+Large transition: 300–500ms.
+
+Easing nên tự nhiên.
+
+Không lạm dụng animation.
+
+Hỗ trợ:
+
+prefers-reduced-motion
+
+để người dùng có thể giảm animation.
+
+17. SCROLL EXPERIENCE
+Nếu phù hợp:
+
+Smooth scrolling.
+
+Reveal animation.
+
+Sticky sections.
+
+Progress indicator.
+
+Parallax rất nhẹ.
+
+Không sử dụng hiệu ứng scroll gây chóng mặt hoặc làm website chậm.
+
+18. RESPONSIVE DESIGN
+Website phải hoạt động tốt trên:
+
+Mobile 320px+.
+
+Mobile 375px.
+
+Mobile 390px.
+
+Mobile 414px.
+
+Tablet.
+
+Laptop.
+
+Desktop.
+
+Large desktop.
+
+Không được chỉ "thu nhỏ desktop xuống mobile".
+
+Phải thiết kế mobile layout thực sự.
+
+Kiểm tra:
+
+Navigation.
+
+Typography.
+
+Grid.
+
+Cards.
+
+Images.
+
+Tables.
+
+Forms.
+
+Modals.
+
+Dropdown.
+
+Buttons.
+
+Không được có horizontal overflow ngoài ý muốn.
+
+19. DARK MODE
+Nếu phù hợp với website, hãy hỗ trợ:
+
+Light mode.
+
+Dark mode.
+
+System preference.
+
+Dark mode phải được thiết kế riêng về:
+
+Background.
+
+Surface.
+
+Border.
+
+Text.
+
+Muted text.
+
+Accent.
+
+Shadow.
+
+Không chỉ đảo màu một cách máy móc.
+
+20. ACCESSIBILITY
+Website phải chú ý:
+
+Semantic HTML.
+
+Keyboard navigation.
+
+Focus state.
+
+ARIA khi cần.
+
+Alt text.
+
+Color contrast.
+
+Form labels.
+
+Screen reader compatibility.
+
+Reduced motion.
+
+Không sử dụng màu sắc là phương thức duy nhất để truyền đạt trạng thái.
+
+21. ICON
+Sử dụng icon nhất quán.
+
+Ưu tiên:
+
+Lucide Icons
+
+Không sử dụng emoji thay cho icon UI chuyên nghiệp trừ khi tôi yêu cầu.
+
+Icon phải có kích thước hợp lý.
+
+22. IMAGE / MEDIA
+Nếu cần hình ảnh:
+
+Ưu tiên ảnh chất lượng cao.
+
+Có aspect ratio rõ ràng.
+
+Có lazy loading.
+
+Có fallback.
+
+Có alt text.
+
+Không làm layout shift.
+
+Nếu chưa có hình ảnh thực tế, hãy tạo placeholder có cấu trúc rõ ràng để dễ thay thế.
+
+Không sử dụng hình ảnh random không liên quan đến nội dung.
+
+23. TRẠNG THÁI UI
+Mọi component có dữ liệu động phải xem xét:
+
+Loading
+Hiển thị:
+
+Skeleton.
+
+Spinner.
+
+Progress.
+
+Empty
+Ví dụ:
+
+"Chưa có dữ liệu"
+
+kèm CTA phù hợp.
+
+Error
+Có:
+
+Error message.
+
+Retry.
+
+Hướng dẫn người dùng.
+
+Success
+Có feedback rõ ràng.
+
+Disabled
+Button/input phải thể hiện rõ trạng thái.
+
+24. SEARCH
+Nếu website có search:
+
+Phải hỗ trợ:
+
+Search input.
+
+Debounce.
+
+Loading.
+
+Empty result.
+
+Error.
+
+Clear search.
+
+Keyboard interaction.
+
+Search result highlighting nếu phù hợp.
+
+Nếu có thể:
+
+Cmd/Ctrl + K
+
+Search modal.
+
+25. NOTIFICATION / TOAST
+Khi có hành động:
+
+Create.
+
+Update.
+
+Delete.
+
+Login.
+
+Logout.
+
+Upload.
+
+Payment.
+
+Hãy cung cấp feedback bằng toast hoặc UI phù hợp.
+
+Không spam notification.
+
+26. MODAL / DIALOG
+Modal phải:
+
+Accessible.
+
+Có close button.
+
+Đóng bằng ESC.
+
+Focus management.
+
+Overlay.
+
+Animation.
+
+Responsive.
+
+Trên mobile phải phù hợp với màn hình nhỏ.
+
+27. TABLE
+Nếu website có bảng dữ liệu:
+
+Desktop:
+
+Table rõ ràng.
+
+Header sticky nếu cần.
+
+Sort.
+
+Filter.
+
+Pagination.
+
+Mobile:
+
+Không ép table quá rộng.
+
+Có thể sử dụng:
+
+Horizontal scroll.
+
+Responsive card.
+
+Collapsible row.
+
+28. PAGINATION
+Nếu dữ liệu lớn:
+
+Pagination.
+
+Page size.
+
+Current page.
+
+Next/Previous.
+
+Disabled states.
+
+Có thể sử dụng infinite scroll nếu UX phù hợp.
+
+29. DASHBOARD
+Nếu dự án có dashboard:
+
+Thiết kế:
+
+Sidebar.
+
+Topbar.
+
+Overview cards.
+
+Charts.
+
+Tables.
+
+Activity feed.
+
+Notifications.
+
+Quick actions.
+
+User profile.
+
+Dashboard phải có visual hierarchy tốt.
+
+Không biến dashboard thành một màn hình đầy widget không có khoảng thở.
+
+30. AUTHENTICATION
+Nếu cần authentication:
+
+Phải có:
+
+Register.
+
+Login.
+
+Logout.
+
+Forgot password.
+
+Reset password.
+
+Session.
+
+Protected pages.
+
+Error states.
+
+Nếu cần:
+
+Google OAuth.
+
+GitHub OAuth.
+
+Role-based access.
+
+Không lưu password dạng plain text.
+
+31. SECURITY
+Tuân thủ các nguyên tắc cơ bản:
+
+Không expose secret.
+
+Không hard-code API keys.
+
+Validate input.
+
+Sanitize dữ liệu.
+
+Authentication.
+
+Authorization.
+
+Secure cookies.
+
+CSRF protection khi cần.
+
+Rate limiting khi cần.
+
+Không tin tưởng dữ liệu từ client.
+
+Không expose sensitive server data.
+
+32. DATABASE
+Nếu website cần database:
+
+Thiết kế schema trước.
+
+Ví dụ:
+
+User:
+
+id
+
+name
+
+email
+
+passwordHash
+
+role
+
+createdAt
+
+updatedAt
+
+Sau đó bổ sung model cần thiết.
+
+Database schema phải:
+
+Có relation rõ ràng.
+
+Có index khi cần.
+
+Có unique constraints.
+
+Có timestamps.
+
+Tránh duplicate data không cần thiết.
+
+33. API
+API phải:
+
+Có cấu trúc rõ ràng.
+
+Type-safe nếu có thể.
+
+Validate request.
+
+Validate response.
+
+Có error handling.
+
+Có status code đúng.
+
+Không trả sensitive information.
+
+Ví dụ:
+
+GET /api/products
+
+POST /api/products
+
+GET /api/products/:id
+
+PATCH /api/products/:id
+
+DELETE /api/products/:id
+
+34. ERROR HANDLING
+Phải xử lý:
+
+Network error.
+
+API error.
+
+Validation error.
+
+Authentication error.
+
+Authorization error.
+
+Timeout.
+
+Không hiển thị stack trace cho người dùng cuối.
+
+35. SEO
+Nếu website public, hãy tối ưu:
+
+Title.
+
+Meta description.
+
+Open Graph.
+
+Twitter/X card.
+
+Canonical URL.
+
+Sitemap.
+
+Robots.
+
+Semantic HTML.
+
+Structured data nếu phù hợp.
+
+Mỗi page quan trọng phải có metadata phù hợp.
+
+36. PERFORMANCE
+Ưu tiên:
+
+Server rendering khi phù hợp.
+
+Static generation khi phù hợp.
+
+Dynamic import.
+
+Lazy loading.
+
+Image optimization.
+
+Font optimization.
+
+Code splitting.
+
+Caching.
+
+Minimize unnecessary client components.
+
+Reduce JavaScript bundle.
+
+Không sử dụng thư viện nặng nếu không cần thiết.
+
+37. UX PRINCIPLES
+Hãy áp dụng:
+
+Clear hierarchy.
+
+Consistency.
+
+Visibility of system status.
+
+Immediate feedback.
+
+Error prevention.
+
+Easy recovery.
+
+Progressive disclosure.
+
+Minimal cognitive load.
+
+Người dùng phải luôn hiểu:
+
+Tôi đang ở đâu?
+
+Tôi có thể làm gì?
+
+Điều gì vừa xảy ra?
+
+Bước tiếp theo là gì?
+
+38. TRANG CẦN XÂY DỰNG
+Dựa trên loại website, hãy tạo các trang phù hợp.
+
+Ví dụ:
+
+Public
+Home.
+
+About.
+
+Services.
+
+Pricing.
+
+Blog.
+
+Blog Detail.
+
+Contact.
+
+FAQ.
+
+Authentication
+Login.
+
+Register.
+
+Forgot Password.
+
+Reset Password.
+
+User
+Dashboard.
+
+Profile.
+
+Settings.
+
+Notifications.
+
+Admin
+Admin Dashboard.
+
+User Management.
+
+Content Management.
+
+Analytics.
+
+Settings.
+
+Không tạo những trang không cần thiết chỉ để tăng số lượng.
+
+39. FOOTER
+Footer cần:
+
+Logo.
+
+Short description.
+
+Navigation.
+
+Resources.
+
+Social links.
+
+Contact.
+
+Legal.
+
+Copyright.
+
+Trên mobile phải sắp xếp lại hợp lý.
+
+40. CONTENT
+Không sử dụng toàn bộ:
+
+Lorem ipsum
+
+trừ khi thật sự cần placeholder.
+
+Hãy tạo nội dung mẫu có ngữ nghĩa, phù hợp với loại website.
+
+Ví dụ website SaaS thì nội dung phải giống SaaS.
+
+Website e-commerce thì nội dung phải giống e-commerce.
+
+41. DATA MOCK
+Nếu backend chưa được kết nối:
+
+Tạo mock data có cấu trúc thực tế.
+
+Ví dụ:
+
+const products = [
+  {
+    id: "prod_001",
+    name: "...",
+    description: "...",
+    price: 1290000,
+    image: "...",
+    category: "...",
+  }
+]
+
+Mock data phải dễ thay thế bằng API thật.
+
+Không hard-code dữ liệu rải rác trong UI component.
+
+42. CODE QUALITY
+Code phải:
+
+TypeScript strict.
+
+Có type rõ ràng.
+
+Không dùng any nếu có thể tránh.
+
+Không duplicate logic.
+
+Component nhỏ và dễ bảo trì.
+
+Function có trách nhiệm rõ ràng.
+
+Naming rõ nghĩa.
+
+Không viết code thừa.
+
+Không tạo abstraction quá mức cần thiết.
+
+43. FOLDER STRUCTURE
+Hãy đề xuất và sử dụng cấu trúc phù hợp.
+
+Ví dụ:
+
+src/
+├── app/
+│   ├── (marketing)/
+│   ├── dashboard/
+│   ├── admin/
+│   ├── api/
+│   ├── layout.tsx
+│   └── page.tsx
+│
+├── components/
+│   ├── ui/
+│   ├── layout/
+│   ├── navigation/
+│   ├── sections/
+│   └── features/
+│
+├── hooks/
+├── lib/
+├── services/
+├── types/
+├── utils/
+├── constants/
+└── config/
+
+Điều chỉnh structure nếu dự án yêu cầu khác.
+
+44. ENVIRONMENT VARIABLES
+Nếu cần:
+
+DATABASE_URL=
+NEXTAUTH_SECRET=
+NEXT_PUBLIC_APP_URL=
+API_URL=
+
+Không điền secret giả vào source code.
+
+Tạo:
+
+.env.example
+
+45. PACKAGE MANAGEMENT
+Hãy tạo package.json với dependencies cần thiết.
+
+Không cài hàng chục package không cần thiết.
+
+Mỗi dependency phải có lý do sử dụng.
+
+46. README
+Hãy tạo README hoàn chỉnh bao gồm:
+
+Project description.
+
+Features.
+
+Tech stack.
+
+Requirements.
+
+Installation.
+
+Environment variables.
+
+Database setup.
+
+Development.
+
+Build.
+
+Production.
+
+Deployment.
+
+Folder structure.
+
+47. TESTING
+Nếu phù hợp với dự án:
+
+Unit test.
+
+Integration test.
+
+E2E test.
+
+Ít nhất hãy thiết kế code sao cho dễ test.
+
+Các flow quan trọng cần được kiểm tra:
+
+Authentication.
+
+Form submission.
+
+CRUD.
+
+Search.
+
+Checkout nếu có.
+
+Permission.
+
+Error handling.
+
+48. UI DETAILS
+Đặc biệt chú ý:
+
+Background
+Có thể sử dụng:
+
+Gradient rất nhẹ.
+
+Grid pattern.
+
+Dot pattern.
+
+Glow.
+
+Noise texture.
+
+Nhưng phải tinh tế.
+
+Glassmorphism
+Chỉ dùng khi phù hợp.
+
+Không biến toàn bộ website thành glassmorphism.
+
+Gradient
+Gradient phải có mục đích.
+
+Không sử dụng gradient quá nhiều.
+
+Shadows
+Shadow nhẹ, tự nhiên.
+
+Borders
+Border subtle.
+
+Hover
+Hover phải cho người dùng biết element có thể tương tác.
+
+49. PREMIUM VISUAL QUALITY
+Hãy áp dụng các nguyên tắc để website có cảm giác premium:
+
+Large typography.
+
+Generous whitespace.
+
+Strong visual hierarchy.
+
+Consistent spacing.
+
+Subtle motion.
+
+High-quality imagery.
+
+Carefully designed cards.
+
+Consistent iconography.
+
+Refined color palette.
+
+Clear CTA.
+
+Mục tiêu là:
+
+"Nhìn giống một sản phẩm thật được thiết kế bởi một đội ngũ product design chuyên nghiệp."
+
+Không được để website có cảm giác:
+
+Template mặc định.
+
+AI-generated generic UI.
+
+Quá nhiều gradient.
+
+Quá nhiều card.
+
+Quá nhiều shadow.
+
+Quá nhiều animation.
+
+Typography lộn xộn.
+
+50. MOBILE-FIRST
+Hãy thiết kế theo hướng mobile-first.
+
+Sau đó mở rộng cho:
+
+Tablet.
+
+Desktop.
+
+Large screen.
+
+Đặc biệt kiểm tra:
+
+Touch target.
+
+Font size.
+
+Button size.
+
+Navigation.
+
+Modal.
+
+Form.
+
+Table.
+
+51. USER FLOW
+Trước khi code, hãy xác định các flow quan trọng.
+
+Ví dụ:
+
+Visitor
+  ↓
+Landing Page
+  ↓
+View Product
+  ↓
+Register/Login
+  ↓
+Dashboard
+  ↓
+Perform Action
+  ↓
+Success/Error
+
+Nếu website có nhiều role:
+
+Visitor
+User
+Admin
+
+Hãy xác định quyền của từng role.
+
+52. QUY TẮC KHI THIẾT KẾ
+Không hỏi tôi những câu hỏi không cần thiết.
+
+Nếu thông tin còn thiếu nhưng có thể đưa ra quyết định hợp lý:
+
+Hãy tự quyết định theo best practice.
+
+Chỉ hỏi khi thiếu thông tin khiến việc triển khai hoàn toàn không thể tiếp tục.
+
+Nếu có nhiều phương án kỹ thuật:
+
+Chọn phương án phù hợp nhất.
+
+Giải thích ngắn gọn lý do.
+
+Không đưa ra 10 lựa chọn khiến tôi phải tự quyết định.
+
+53. QUY TRÌNH THỰC HIỆN
+Hãy làm theo quy trình:
+
+PHASE 1 — ANALYSIS
+Phân tích:
+
+Business goal.
+
+Target users.
+
+Main features.
+
+User flows.
+
+Pages.
+
+Data.
+
+Technical requirements.
+
+PHASE 2 — ARCHITECTURE
+Thiết kế:
+
+Tech stack.
+
+Folder structure.
+
+Component architecture.
+
+Data architecture.
+
+API architecture.
+
+Database schema nếu cần.
+
+PHASE 3 — DESIGN SYSTEM
+Xác định:
+
+Color palette.
+
+Typography.
+
+Spacing.
+
+Radius.
+
+Shadows.
+
+Components.
+
+Responsive breakpoints.
+
+Animation principles.
+
+PHASE 4 — IMPLEMENTATION
+Viết code:
+
+Layout.
+
+Components.
+
+Pages.
+
+API.
+
+Database.
+
+Authentication.
+
+Forms.
+
+Validation.
+
+Animations.
+
+Error handling.
+
+PHASE 5 — QUALITY CHECK
+Kiểm tra:
+
+TypeScript errors.
+
+Missing imports.
+
+Broken routes.
+
+Responsive issues.
+
+Accessibility.
+
+SEO.
+
+Performance.
+
+Loading states.
+
+Error states.
+
+Empty states.
+
+Security.
+
+PHASE 6 — FINAL OUTPUT
+Xuất:
+
+Project architecture.
+
+Folder tree.
+
+Installation instructions.
+
+Dependencies.
+
+Environment variables.
+
+Complete source code.
+
+Database schema nếu có.
+
+API.
+
+README.
+
+Testing instructions.
+
+54. QUY TẮC OUTPUT CODE
+Đây là yêu cầu CỰC KỲ QUAN TRỌNG.
+
+Tôi không muốn pseudo-code.
+
+Tôi không muốn:
+
+// TODO: implement
+
+hoặc:
+
+// Add your logic here
+
+hoặc:
+
+// Continue...
+
+hoặc:
+
+// Similar components...
+
+Không được bỏ qua những phần quan trọng.
+
+Hãy cung cấp CODE HOÀN CHỈNH CÓ THỂ COPY VÀO PROJECT.
+
+Nếu project quá lớn và không thể xuất toàn bộ trong một response:
+
+Chia thành nhiều phần logic.
+
+Đánh số Part 1, Part 2, Part 3...
+
+Mỗi phần phải tiếp nối chính xác phần trước.
+
+Không tự ý rút gọn code.
+
+Không thay thế code bằng pseudo-code.
+
+Không bỏ qua file quan trọng.
+
+55. FORMAT OUTPUT
+Hãy trả kết quả theo thứ tự:
+
+1. Project Overview
+Mô tả ngắn gọn.
+
+2. Feature List
+Danh sách chức năng.
+
+3. User Flow
+Mô tả flow.
+
+4. Technical Architecture
+Mô tả kiến trúc.
+
+5. Folder Structure
+Hiển thị cây thư mục.
+
+6. Design System
+Màu sắc, typography, spacing, components.
+
+7. Installation
+Các bước cài đặt.
+
+8. Environment Variables
+.env.example
+
+9. Dependencies
+package.json
+
+10. Source Code
+Cung cấp từng file với đường dẫn rõ ràng.
+
+Ví dụ:
+
+src/app/page.tsx
+
+sau đó:
+
+// complete code
+
+11. Database
+Nếu cần.
+
+12. API
+Nếu cần.
+
+13. README
+Hoàn chỉnh.
+
+14. Testing
+Hướng dẫn test.
+
+15. Final Quality Checklist
+Checklist cuối cùng.
+
+56. QUY TẮC "NO SHORTCUT"
+Không được:
+
+Fake chức năng bằng UI.
+
+Tạo button không có action.
+
+Tạo link chết.
+
+Tạo form không xử lý.
+
+Tạo search chỉ để trang trí.
+
+Tạo authentication giả nếu đã yêu cầu auth thật.
+
+Tạo database giả nếu database được yêu cầu.
+
+Hard-code secret.
+
+Bỏ qua responsive.
+
+Bỏ qua loading/error states.
+
+Bỏ qua validation.
+
+Bỏ qua accessibility.
+
+Bỏ qua SEO.
+
+Dùng placeholder thay cho logic quan trọng.
+
+57. FINAL SELF-REVIEW
+Trước khi trả lời cuối cùng, hãy tự kiểm tra website như một Senior Developer.
+
+Hãy tự hỏi:
+
+Có file nào bị thiếu không?
+
+Import có đúng không?
+
+TypeScript có lỗi không?
+
+Component có render đúng không?
+
+Route có tồn tại không?
+
+Button có hoạt động không?
+
+Form có validation không?
+
+API có error handling không?
+
+Mobile có hoạt động không?
+
+Desktop có hoạt động không?
+
+Dark mode có lỗi không?
+
+Loading state có chưa?
+
+Empty state có chưa?
+
+Error state có chưa?
+
+Accessibility có chưa?
+
+SEO có chưa?
+
+Performance có vấn đề gì không?
+
+Security có vấn đề gì không?
+
+Có dependency nào không cần thiết không?
+
+Có code duplicate không?
+
+Có secret nào bị hard-code không?
+
+Nếu phát hiện vấn đề, hãy sửa trước khi đưa code cho tôi.
+
+58. TIÊU CHUẨN CHẤT LƯỢNG CUỐI CÙNG
+Hãy tối ưu website theo 5 yếu tố:
+
+Visual Quality
+★★★★★
+
+UX
+★★★★★
+
+Code Quality
+★★★★★
+
+Performance
+★★★★★
+
+Maintainability
+★★★★★
+
+Không cần hiển thị điểm số này trong website.
+
+Đây chỉ là tiêu chuẩn nội bộ để tự kiểm tra chất lượng.
+
+59. YÊU CẦU QUAN TRỌNG NHẤT
+Hãy hành xử như một đội ngũ phát triển sản phẩm chuyên nghiệp, không phải một AI sinh code đơn giản.
+
+Trước tiên hãy hiểu bài toán.
+
+Sau đó thiết kế.
+
+Sau đó triển khai.
+
+Sau đó kiểm tra.
+
+Sau đó tối ưu.
+
+Không được nhảy thẳng vào việc viết một vài component UI rồi kết luận hoàn thành.
+
+Mục tiêu cuối cùng là tạo ra một website:
+
+Beautiful + Modern + Premium + Responsive + Accessible + Fast + Secure + SEO-friendly + Maintainable + Production-ready.
+
+60. PROJECT SPECIFICATION
+Bây giờ hãy áp dụng toàn bộ framework phía trên cho dự án sau:
+
+Tên dự án
+[TÊN DỰ ÁN]
+
+Mô tả
+[MÔ TẢ WEBSITE]
+
+Người dùng mục tiêu
+[TARGET USERS]
+
+Các chức năng chính
+[DANH SÁCH FEATURES]
+
+Các trang
+[DANH SÁCH PAGES]
+
+Phong cách mong muốn
+[STYLE]
+
+Màu thương hiệu
+[COLORS — nếu có]
+
+Công nghệ bắt buộc
+[TECH STACK — nếu có]
+
+Công nghệ không được sử dụng
+[RESTRICTIONS — nếu có]
+
+Yêu cầu đặc biệt
+[SPECIAL REQUIREMENTS]
+
+BẮT ĐẦU
+Bây giờ hãy bắt đầu bằng việc phân tích project specification.
+
+Sau đó lần lượt:
+
+ANALYZE → ARCHITECT → DESIGN → IMPLEMENT → TEST → OPTIMIZE → DELIVER
+
+Hãy tạo ra toàn bộ source code hoàn chỉnh, production-ready và có thể chạy được.
+
+Không sử dụng pseudo-code cho những phần quan trọng.
+
+Không bỏ qua file quan trọng.
+
+Không rút gọn code bằng những câu như:
+
+"rest of code..."
+
+"implement similarly..."
+
+"code omitted..."
+
+Nếu output vượt giới hạn, hãy chia thành nhiều phần và tiếp tục cho đến khi hoàn thành toàn bộ project.
+
+BẮT ĐẦU NGAY.
+
+Bạn có thể làm prompt này mạnh hơn nữa bằng cách thay phần PROJECT SPECIFICATION cuối prompt bằng yêu cầu website cụ thể của bạn. Ví dụ: “Xây dựng website bán giày Nike cao cấp có giỏ hàng, thanh toán, tài khoản, admin dashboard…” — khi đó AI sẽ có đủ ngữ cảnh để sinh ra kiến trúc và code sát với sản phẩm thực tế hơn.
+
